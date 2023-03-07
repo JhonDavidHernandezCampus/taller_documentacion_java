@@ -1,15 +1,14 @@
-/* Método includes
-Método slice() 
+/* Método repeat()
 
-Extrae una sección de una cadena y devuelve una nueva cadena.
+El método repeat() construye y devuelve una nueva cadena que contiene el número especificado de
+copias de la cadena en la cual fue llamada, concatenados.
    Ejemplo */
 
-alert("Me corta una parte de la cadena segun como le indiquemos y me debuelve la parte cortada :)")
+alert("El metodo repeat me multiplica la cadena de texto las veces que le digamos y me la regresa como una sola cadana:)")
 let cadena =  prompt("Ingrese una cadena de texto:")
-let ini = prompt(`ingrese el numero desde donde desea cortar la cadena`)
-let fin = prompt(` ingrese el numero hasta donde desea cortar la cadena (que no supere la longitud de la cadena )`)
+let ini = prompt(`ingrese el numero de veces que desea repetir la cadena`)
 
 
-alert(`La cadena queda de la siguiente forma : \n  ${cadena.substring(ini , fin)}`)
+alert(`La cadena queda de la siguiente forma : \n  ${cadena.repeat(ini)}`)
 
 
