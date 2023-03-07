@@ -1,17 +1,15 @@
 /* Método includes
-El método replace() devuelve una nueva cadena con algunas o todas las coincidencias de un patrón. Como
-primer argumento, se le pasa la coincidencia que se busca y se quiere reemplazar y como segundo
-argumento, se le pasa la cadena por la cual se reemplazará la coincidencia. Si el patrón es una cadena,
-sólo la primera coincidencia será reemplazada.
+Método slice() 
+
+Extrae una sección de una cadena y devuelve una nueva cadena.
    Ejemplo */
 
-alert("Me reemplaza una parte de la cadena indicada por otra:)")
+alert("Me corta una parte de la cadena segun como le indiquemos y me debuelve la parte cortada :)")
 let cadena =  prompt("Ingrese una cadena de texto:")
-let letra = prompt("ingrese la parte del texto que desea reemplazar:");
-let cambio = prompt(`ingrese el texto por el cual desea reemplazar la:${letra} `);
+let ini = prompt(`ingrese el numero desde donde desea cortar la cadena`)
+let fin = prompt(` ingrese el numero hasta donde desea cortar la cadena (que no supere la longitud de la cadena )`)
 
 
-alert(`Me reemplaza la palabra ${letra}  por ${cambio}\n  ${cadena.replace(letra , cambio)}`)
-alert(`La cadena queda asi: \n ${cadena.replace(letra , cambio)}`)
+alert(`La cadena queda de la siguiente forma : \n  ${cadena.substring(ini , fin)}`)
 
 
