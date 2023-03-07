@@ -1,11 +1,11 @@
-/* Método length 
-
-Indica el número de unidades en la cadena. 
+/* Método includes
+Devuelven si o no la cadena comienza, termina o contiene una subcadena especificada.
    Ejemplo */
 
-alert("El metodo length Indica el número de unidades en la cadena(con espacios incluidos)")
+alert("El metodo 'includes' devuelven si o no la cadena comienza, termina o contiene una subcadena especificada.)")
 let cadena =  prompt("Ingrese una cadena de texto:")
+let letra = prompt("ingrese una letra para evaluar si se encuentra en la cadena de texto:");
 
-alert(`La cantidad de caracteres que tiene la cadena \n ingresada anterior mente son:  ${cadena.length}`)
-console.log(`La cantidad de caracteres que tiene la cadena \n ingresada anterior mente son:  ${cadena.length}`)
+
+alert(`¿la letra ' ${letra} ' se encuentra en la cadena dijitada anterior mente?\n  ${cadena.includes(letra)}`)
 
