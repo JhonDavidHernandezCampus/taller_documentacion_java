@@ -1,11 +1,12 @@
 /* Método includes
-Devuelven si o no la cadena comienza, termina o contiene una subcadena especificada.
+El método startsWith() indica si una cadena de texto comienza con los caracteres de 
+una cadena de texto concreta, devolviendo true o false según corresponda.
    Ejemplo */
 
-alert("El metodo 'includes' devuelven si o no la cadena comienza, termina o contiene una subcadena especificada.)")
+alert("Me evalua si un caracter se encuentra en la primera posision de la cadena de texto:)")
 let cadena =  prompt("Ingrese una cadena de texto:")
-let letra = prompt("ingrese una letra para evaluar si se encuentra en la cadena de texto:");
+let letra = prompt("ingrese una letra para evaluar si se encuentra al primcipio de la cadena de texto:");
 
 
-alert(`¿la letra ' ${letra} ' se encuentra en la cadena dijitada anterior mente?\n  ${cadena.includes(letra)}`)
+alert(`¿la letra ' ${letra} ' se encuentra en la primera posicion de la cadena ingresada anteriormente\n  ${cadena.startsWith(letra)}`)
 
