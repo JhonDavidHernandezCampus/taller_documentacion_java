@@ -1,5 +1,5 @@
 /* Operadores  
-operadores Aritmeticos
+operadores Comparacion
 
 */
 
