@@ -12,3 +12,5 @@ alert(`¿los dos numeros son iguales (==)? \n\t\t ${num1 == num2} \n¿los numero
     ¿Los numeros son iguales y son del mismo tipo de dato (===)? \n\t\t  ${num1 === num2} \n¿las variables son del mismo tipo pero no son iguales? \n\t\t ${num1 !== num2}\n
     ¿El numero ${num1} es menor que ${num2} (<)?\n\t\t ${num1<num2}\n¿El numero ${num1} es mayor que ${num2} (>)?\n\t\t ${num1>num2}\n
     ¿El numero ${num1} es mayor o igual que ${num2} (>=)?\n\t\t ${num1 >= num2}\n ¿El numero ${num1} es menor o igual que ${num2} (<=)?\n\t\t ${num1<=num2}`)
+
+    
