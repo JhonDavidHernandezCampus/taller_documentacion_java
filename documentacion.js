@@ -1,35 +1,30 @@
-/* Operadores  
-Funciones Matematicas en java
 
-El objeto Math de Javascript incorpora varias constantes que podemos necesitar en algunas operaciones matemáticas. Veamos su significado y valor aproximado.
+/* LAS FUNCIONES 
 
-Math es un objeto interno de Javascript que tiene incorporadas ciertas constantes y métodos (funciones) para trabajar matemáticamente.
-
+En Javascript, las funciones son uno de los tipos de datos más importantes,
+ ya que estamos continuamente utilizándolas a lo largo de nuestro código.
 */
 
-alert("Funciones matematicas de java")
+/* Funciones mediante declaracion  */
+function declaFuncion (parametro_1,parametro_2,parametro_3){
+    console.log(`las funciones por declaaracion permiten declarar una función que existirá a lo largo de todo el código`) 
+}
 
 
-
-let num1 = Number(prompt("ingrese un numero para hacer las operaciones "))
-let num2 = Number(prompt("ingrese otro numero para hacer las operaciones :"))
-
-alert(`se tomara el numero ${num1} como el radio de un circulo:\n
-        se calcula el area de un circulo con la funcion .PI de java\n
-        A=${(Math.PI)*(num1**2)} `)
-
-alert(`Calcular el numero mayor y menor de los dos con .min y .max\n
-    Valos minimo: ${Math.min(num1,num2)}\n
-    Valor maximo: ${Math.max(num1,num2)} `) 
-
-alert(`se crea un numero randon con la funcion .randon\n
-      El  numero creado por la funcion randon fue: ${Math.random(100,20)} `)
+/* Funciones mediante exprecion */
+let varFuncion = function expeFuncion(parametro_1,parametro_2,parametro_3){ 
+    console.log(`las funciones por exprecion guardan su contenido en una variable para despues ser ejecutada por ahi \nla variable no puede ser llamada antes de ser declarada en la funcion. ` )
+}
 
 
+/* Funciones como objetos */
+const funcObjeto = new Function("return ' se pueden declarar funciones como si fueran objetos. Sin embargo, es un enfoque que no se suele utilizar en producción.';")
+funcObjeto();
 
-/* La función Math.pow() retorna la base elevada al exponente, es decir, baseexponente. La base y el exponente estan en el sistema numérico decimal. */
 
-alert(`Utilixamos la funcion .pow para elevar un numero a una potrencia en este caso ( ${num1}^${num2} )\n
-    resultado= ${Math.pow(num1,num2)}`);
+declaFuncion(1,2,3);
+/* la funcion se debe llamar por el nombre de la variable nbo por la del la funcion */
+varFuncion(1,2,3);
+
 
 
