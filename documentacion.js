@@ -5,26 +5,32 @@ En Javascript, las funciones son uno de los tipos de datos más importantes,
  ya que estamos continuamente utilizándolas a lo largo de nuestro código.
 */
 
-/* Funciones mediante declaracion  */
-function declaFuncion (parametro_1,parametro_2,parametro_3){
-    console.log(`las funciones por declaaracion permiten declarar una función que existirá a lo largo de todo el código`) 
-}
+/* Funciones anonimas  */
+/* esta retornan un valor o una cadena de texto */
+const funcAnonima = function () {
+    return console.log("Las funciones anónimas o funciones lambda son un tipo de funciones que se declaran \nsin nombre de función y se alojan en el interior de una variable y haciendo \nreferencia a ella cada vez que queramos utilizarla:"); 
+};
+funcAnonima();
+
+/* Funciones como callbacks */
+/* Son funciones en las que llamamos o que dentro de esta usamos otra funcion */
+
+const funcionCallbacks =  function (otrafuncion) {
+    console.log(`esta funcion llama a otra funcion dentro de ella. de modo que la función A puede ejecutar esa función B de forma genérica desde su código, y nosotros podemos\n definirlas desde fuera de dicha función:`)
+    otrafuncion();
+};
+
+funcionCallbacks(funcAnonima);
+
+/* Funciones Autoejecutables  */
+/* las funciones auto ejecutables se ejecutan solas durante la marcha del codigo sin necesidad de llamarlas */
+const saludo = function () {
+    return "Hola";
+};
 
 
-/* Funciones mediante exprecion */
-let varFuncion = function expeFuncion(parametro_1,parametro_2,parametro_3){ 
-    console.log(`las funciones por exprecion guardan su contenido en una variable para despues ser ejecutada por ahi \nla variable no puede ser llamada antes de ser declarada en la funcion. ` )
-}
-
-
-/* Funciones como objetos */
-const funcObjeto = new Function("return ' se pueden declarar funciones como si fueran objetos. Sin embargo, es un enfoque que no se suele utilizar en producción.';")
-funcObjeto();
-
-
-declaFuncion(1,2,3);
-/* la funcion se debe llamar por el nombre de la variable nbo por la del la funcion */
-varFuncion(1,2,3);
-
-
+( function(){
+    console.log("esta funcion se ejecuta sin necesaiadad de llamarla ");
+    
+})();/* en estos parentesis iran los parametros */
 
