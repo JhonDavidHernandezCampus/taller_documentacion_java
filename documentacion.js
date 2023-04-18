@@ -1,36 +1,37 @@
 
-/* LAS FUNCIONES 
-
-En Javascript, las funciones son uno de los tipos de datos más importantes,
- ya que estamos continuamente utilizándolas a lo largo de nuestro código.
-*/
-
-/* Funciones anonimas  */
-/* esta retornan un valor o una cadena de texto */
-const funcAnonima = function () {
-    return console.log("Las funciones anónimas o funciones lambda son un tipo de funciones que se declaran \nsin nombre de función y se alojan en el interior de una variable y haciendo \nreferencia a ella cada vez que queramos utilizarla:"); 
-};
-funcAnonima();
-
-/* Funciones como callbacks */
-/* Son funciones en las que llamamos o que dentro de esta usamos otra funcion */
-
-const funcionCallbacks =  function (otrafuncion) {
-    console.log(`esta funcion llama a otra funcion dentro de ella. de modo que la función A puede ejecutar esa función B de forma genérica desde su código, y nosotros podemos\n definirlas desde fuera de dicha función:`)
-    otrafuncion();
-};
-
-funcionCallbacks(funcAnonima);
-
-/* Funciones Autoejecutables  */
-/* las funciones auto ejecutables se ejecutan solas durante la marcha del codigo sin necesidad de llamarlas */
-const saludo = function () {
-    return "Hola";
-};
+/* callback y promesas */
+ /* los callback son funciones que se llaman dentro de otra como parametro, ha esto se le conoce como callback */
 
 
-( function(){
-    console.log("esta funcion se ejecuta sin necesaiadad de llamarla ");
-    
-})();/* en estos parentesis iran los parametros */
+let num1 =Number(prompt("ingrese un numero a sumar "));
+let num2 =Number(prompt("ingrese otro numero a sumar "));
 
+let laoperacio_Callback =(num1,num2)=>{
+    return num1+num2;
+}
+let operacion =(num1,num2,laoperacio_Callback)=>{
+    return laoperacio_Callback(num1,num2);
+}
+
+console.log(operacion(num1,num2,laoperacio_Callback));
+
+/* Las promesas son la nueva forma de realizar acciones asíncronas dentro de JS. Comencemos analizando cómo crear una:
+Recibe una función con dos parámetros (resolve, reject) las cuales son funciones que se ejecutarán en caso de éxito o error, respectivamente. Puedes pasarle un argumento a estas funciones, el cual podrás usar más adelante. */
+/*  la promesa puede estar en tres estados
+    pending: La promesa está en curso, y aún no se ha resuelto o rechazado.
+    fulfilled: La promesa se ha resuelto satisfactoriamente, y tiene un valor resultante.
+    rejected: La promesa se ha rechazado, y tiene un motivo de rechazo. */
+console.log("De aqui para abajo esta la suma pero pr promesas");
+
+let sumar = (num1,num2)=>{
+    return new Promise((resol,reset)=>{
+        (isNaN(num1)|| isNaN(num2))?reset("ingrese un numereo valido"):resol(num1+num2)
+    });
+}
+
+sumar(num1,num2).then((resultado)=>{
+    console.log("la suma es ", resultado);
+})
+.catch((error)=>{ 
+    console.log("numero no valido");
+});
